@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import sys
 def remove_char_at(str, n):
     length = len(str)
     copy = ""
