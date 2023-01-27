@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import sys
 def remove_char_at(str, n):
     length = len(str)
     copy = ""
@@ -10,4 +11,4 @@ def remove_char_at(str, n):
                 copy += letter
         else:
             copy += letter
-    print("{}".format(copy))
+    return(copy)
