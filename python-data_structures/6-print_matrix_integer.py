@@ -3,6 +3,6 @@ def print_matrix_integer(matrix=[[]]):
     for fila in matrix:
         for value in fila:
             if value % 3 == 0:
-                print(value)
+                print("{:d}".format(value))
             else:
-                print(value, end=' ')
+                print("{:d}".format(value), end=' ')
