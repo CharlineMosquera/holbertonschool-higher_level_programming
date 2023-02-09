@@ -9,7 +9,6 @@ class Square():
     def __init__(self, size=0, position=(0, 0)):
         """
         Initializes a new instance of the Square class
-        
         :param size: The size of the square (default is 0)
         :type size: int
         :param position: The position of the square (default is (0, 0))
@@ -21,7 +20,6 @@ class Square():
     def area(self):
         """
         Calculates the area of the square
-        
         :return: The area of the square
         """
         return (self.__size ** 2)
@@ -30,7 +28,6 @@ class Square():
     def size(self):
         """
         Gets the size of the square
-        
         :return: The size of the square
         """
         return (self.__size)
@@ -39,7 +36,6 @@ class Square():
     def size(self, value):
         """
         Sets the size of the square
-        
         :param size_value: The size to set for the square
         """
         if not isinstance(value, int):
@@ -52,7 +48,6 @@ class Square():
     def position(self):
         """
         Get the position of the square.
-        
         :return: tuple: The position of the square on a 2D plane.
         """
         return (self.__position)
@@ -60,10 +55,9 @@ class Square():
     @position.setter
     def position(self, value):
         """property setter for the position attribute
-
         Args:
-        value (tuple): a tuple of 2 positive integers representing the position of the square
-
+        value (tuple): a tuple of 2 positive integers representing
+        the position of the square
         Raises:
         TypeError: if value is not a tuple of 2 positive integers
         """
@@ -75,7 +69,6 @@ class Square():
 
     def my_print(self):
         """Prints the square using the character '#'
-
         If the size attribute is 0, it prints an empty line.
         Otherwise, it prints the square using the '#' character,
         and taking into account the position attribute.
