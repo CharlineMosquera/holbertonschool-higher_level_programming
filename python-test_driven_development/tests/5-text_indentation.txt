@@ -1,0 +1,37 @@
+tests text indentation
+----------------------
+
+import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("")
+
+>>> text_indentation()
+Traceback (most recent call last):
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+>>> text_indentation("      ")
+
+>>> text_indentation("Hello World.")
+Hello World.
+<BLANKLINE>
+
+>>> text_indentation(123456789)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation("       many? blanks?")
+many?
+<BLANKLINE>
+ blanks?
+<BLANKLINE>
+
+>>> text_indentation("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.")
+Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+<BLANKLINE>
+ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+<BLANKLINE>
