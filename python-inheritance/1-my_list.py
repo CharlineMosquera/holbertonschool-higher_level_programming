@@ -5,5 +5,5 @@
 class MyList(list):
     """class MyList that inherits from list"""
     def print_sorted(self):
-        sorted_list = sorted(self)
-        print(sorted_list)
+        new_list = sorted(self)
+        print(new_list)
