@@ -27,7 +27,7 @@ import:
 
     >>> bg.integer_validator("area", False)
     Traceback (most recent call last):
-    ValueError: area must be greater than 0
+    TypeError: area must be an integer
 
     >>> bg.integer_validator("width", [8])
     Traceback (most recent call last):
