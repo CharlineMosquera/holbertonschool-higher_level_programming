@@ -4,6 +4,7 @@ from models.base import Base
 
 
 def validate_attributes(value, attribute):
+    """method to validate attributes"""
     if not isinstance(value, int):
         raise TypeError(f"{attribute} must be an integer")
     if attribute == "width" and value <= 0:
