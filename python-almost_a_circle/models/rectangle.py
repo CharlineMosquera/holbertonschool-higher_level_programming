@@ -4,7 +4,7 @@ from models.base import Base
 
 
 def validate_attributes(value, attribute):
-    """method to validate attributes"""
+    """funtion to validate attributes"""
     if not isinstance(value, int):
         raise TypeError(f"{attribute} must be an integer")
     if attribute == "width" and value <= 0:
@@ -68,10 +68,13 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """prints to stdout the instance of Rectangle"""
+        """prints to stdout the instance of Rectangle
+        prints with x and y coordinates"""
         rect = ""
-        for i in range(self.__height):
-            rect += "#" * self.width + "\n"
+        for j in range(self.y):
+            rect += "\n"
+        for i in range(self.height):
+            rect += " " * self.x + "#" * self.width + "\n"
         print(rect[:-1])
 
     def __str__(self):
