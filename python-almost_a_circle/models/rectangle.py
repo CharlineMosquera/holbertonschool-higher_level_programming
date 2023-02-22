@@ -63,6 +63,10 @@ class Rectangle(Base):
         validate_attributes(y, "y")
         self.__y = y
 
+    def __str__(self):
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
+            f"{self.width}/{self.height}"
+
     def area(self):
         """method that returns the area"""
         return self.__width * self.__height
@@ -77,6 +81,8 @@ class Rectangle(Base):
             rect += " " * self.x + "#" * self.width + "\n"
         print(rect[:-1])
 
-    def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
-            f"{self.width}/{self.height}"
+    def update(self, *args):
+        """updates the values of the instance's attributes"""
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        for attribute, value in zip(attributes, args):
+            setattr(self, attribute, value)
