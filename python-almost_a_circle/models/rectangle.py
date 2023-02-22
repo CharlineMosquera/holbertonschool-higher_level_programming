@@ -32,36 +32,36 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, width):
-        validate_attributes(width, "width")
-        self.__width = width
+    def width(self, value):
+        validate_attributes(value, "width")
+        self.__width = value
 
     @property
     def height(self):
         return self.__height
 
     @height.setter
-    def height(self, height):
-        validate_attributes(height, "height")
-        self.__height = height
+    def height(self, value):
+        validate_attributes(value, "height")
+        self.__height = value
 
     @property
     def x(self):
         return self.__x
 
     @x.setter
-    def x(self, x):
-        validate_attributes(x, "x")
-        self.__x = x
+    def x(self, value):
+        validate_attributes(value, "x")
+        self.__x = value
 
     @property
     def y(self):
         return self.__y
 
     @y.setter
-    def y(self, y):
-        validate_attributes(y, "y")
-        self.__y = y
+    def y(self, value):
+        validate_attributes(value, "y")
+        self.__y = value
 
     def __str__(self):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
