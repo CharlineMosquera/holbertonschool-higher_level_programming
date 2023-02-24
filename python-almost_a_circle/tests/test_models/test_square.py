@@ -3,11 +3,9 @@
     Module of unit tests for the Square class.
 """
 import unittest
-import json
+import os.path
 from models.base import Base
 from models.square import Square
-
-
 
 
 class TestSquare(unittest.TestCase):
