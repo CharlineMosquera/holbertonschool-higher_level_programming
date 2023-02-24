@@ -50,7 +50,7 @@ class Base():
         """returns an instance with all attributes"""
         if cls.__name__ == "Square":
             object_dummy = cls(1)
-            object_dummy.update(dictionary)
+            object_dummy.update(**dictionary)
         else:
             object_dummy = cls(1, 2)
             object_dummy.update(**dictionary)
