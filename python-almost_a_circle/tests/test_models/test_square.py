@@ -159,6 +159,12 @@ class TestSquare(unittest.TestCase):
         lst_obj = Square.load_from_file()
         self.assertEqual(lst_obj[0].size, 1)
 
+    def test_Square_save_to_file_exists(self):
+        Square.save_to_file([Square(1)])
+        with open('Square.json', 'r') as f:
+            self.assertEqual(
+                f.read(), '[{"id": 28, "size": 1, "x": 0, "y": 0}]')
+        os.remove('Square.json')
 
 if __name__ == "__main__":
     unittest.main()
