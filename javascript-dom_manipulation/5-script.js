@@ -1,7 +1,7 @@
-var updateHeader = document.getElementById('update_header');
+const updateHeader = document.getElementById('update_header');
 
 updateHeader.addEventListener('click', function () {
-    var headerElement = document.querySelector('header');
+  const headerElement = document.querySelector('header');
 
-    headerElement.textContent = 'New Header!!!';
+  headerElement.textContent = 'New Header!!!';
 });
